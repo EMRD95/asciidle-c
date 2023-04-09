@@ -1,7 +1,13 @@
 # asciidle-c
-Previous asciidle bash script completly rewritten in C to optimize CPU load. The program now display random ASCII art stored as .txt files in a terminal window when executed. The ascii art then scroll through your terminal window.
+Previous asciidle bash script completly rewritten in C to optimize CPU load. The program now displays random ASCII art stored as .txt files in a terminal window when executed. The ascii art then scroll through your terminal window.
 
 The new C program consume almost no CPU and maybe 1 or 2% of ram (on tested environnements)
+
+To run directly, clone this repo, populate the txt folder with ascii art or run the bash script to automatically download some.
+
+Run ./asciidle
+
+To compile the program from source :
 
 Git clone this repo
 
