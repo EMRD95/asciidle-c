@@ -3,6 +3,8 @@ Previous asciidle bash script completly rewritten in C to optimize CPU load. The
 
 Git clone this repo
 
+cd asciidle-c
+
 Compile with gcc -o asciidle asciidle.c -lncurses -lm
 
 Put your ascii art in the txt folder or run the bash script to download some
