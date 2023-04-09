@@ -11,5 +11,7 @@ Put your ascii art in the txt folder or run the bash script to download some
 
 run ./asciidle
 
+![image](https://user-images.githubusercontent.com/114953576/230765145-0f76a3d4-03fe-48d6-85db-9c545e99cb7a.png)
+
 Credit to BRANDON '65535' NIBLETT and the maintainers of asciipr0n.com for providing good quality old school ascii art.
 
