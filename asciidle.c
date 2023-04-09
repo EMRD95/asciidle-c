@@ -5,6 +5,7 @@
 #include <string.h>
 #include <time.h>
 #include <ncurses.h>
+#include <stdbool.h>
 
 void display_ascii_art(const char *filename, int *row);
 void random_ascii_art(const char *folder, char *filename, size_t len);
@@ -68,6 +69,11 @@ void display_ascii_art(const char *filename, int *row) {
     refresh();
 }
 
+bool has_txt_extension(const char *filename) {
+    const char *dot = strrchr(filename, '.');
+    return (dot && strcmp(dot, ".txt") == 0);
+}
+
 void random_ascii_art(const char *folder, char *filename, size_t len) {
     DIR *dir;
     struct dirent *ent;
@@ -76,7 +82,7 @@ void random_ascii_art(const char *folder, char *filename, size_t len) {
 
     if ((dir = opendir(folder)) != NULL) {
         while ((ent = readdir(dir)) != NULL) {
-            if (ent->d_type == DT_REG) {
+            if (ent->d_type == DT_REG && has_txt_extension(ent->d_name)) {
                 file_count++;
             }
         }
@@ -96,7 +102,7 @@ void random_ascii_art(const char *folder, char *filename, size_t len) {
 
     if ((dir = opendir(folder)) != NULL) {
         while ((ent = readdir(dir)) != NULL) {
-            if (ent->d_type == DT_REG) {
+            if (ent->d_type == DT_REG && has_txt_extension(ent->d_name)) {
                 if (file_count == random_file) {
                     snprintf(filename, len, "%s/%s", folder, ent->d_name);
                     break;
