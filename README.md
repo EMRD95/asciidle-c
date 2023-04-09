@@ -5,6 +5,8 @@ The new C program consume almost no CPU and maybe 1 or 2% of ram (on tested envi
 
 To run directly, clone this repo, populate the txt folder with ascii art or run the bash script to automatically download some.
 
+sudo chmod 774 asciidle
+
 Run ./asciidle
 
 .txt files are expected to be in /home/$USER/asciidle-c/txt
