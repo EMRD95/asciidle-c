@@ -7,6 +7,8 @@ To run directly, clone this repo, populate the txt folder with ascii art or run 
 
 Run ./asciidle
 
+.txt files are expected to be in /home/$USER/asciidle-c/txt
+
 To compile the program from source :
 
 Git clone this repo
